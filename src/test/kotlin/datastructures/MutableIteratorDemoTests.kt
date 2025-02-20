@@ -1,10 +1,9 @@
 package datastructures
-/*
+
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class MutableIteratorDemoTests {
-
     @Test
     fun testRemoveEvenElements() {
         val list = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -26,4 +25,3 @@ class MutableIteratorDemoTests {
         assertEquals(setOf(0.1, 0.5, 1.3, Double.NEGATIVE_INFINITY), numbers.toSet())
     }
 }
-*/

@@ -1,5 +1,5 @@
 package datastructures
-/*
+
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -53,9 +53,10 @@ abstract class CustomMutableMapTestsParent {
     @Test
     fun `test entries after some putting`() {
         val expected = emptyCustomMutableMap<String, Int>()
-        val entries = (1..100).map {
-            CustomMutableMap.Entry(it.toString(), it)
-        }
+        val entries =
+            (1..100).map {
+                CustomMutableMap.Entry(it.toString(), it)
+            }
         entries.forEach(expected::put)
         assertEquals(entries, expected.toSet().sortedBy { it.value })
     }
@@ -63,9 +64,10 @@ abstract class CustomMutableMapTestsParent {
     @Test
     fun `test entries after some setting`() {
         val map = emptyCustomMutableMap<String, Int>()
-        val expected: List<CustomMutableMap.Entry<String, Int>> = (1..100).map {
-            CustomMutableMap.Entry(it.toString(), it)
-        }
+        val expected: List<CustomMutableMap.Entry<String, Int>> =
+            (1..100).map {
+                CustomMutableMap.Entry(it.toString(), it)
+            }
         expected.forEach {
             map[it.key] = it.value
         }
@@ -82,9 +84,10 @@ abstract class CustomMutableMapTestsParent {
     @Test
     fun `test entries after some putting (collision prone)`() {
         val map = emptyCustomMutableMap<CollidingString, Int>()
-        val expected = (1..100).map {
-            CustomMutableMap.Entry(CollidingString(it.toString()), it)
-        }
+        val expected =
+            (1..100).map {
+                CustomMutableMap.Entry(CollidingString(it.toString()), it)
+            }
         expected.forEach(map::put)
         assertEquals(expected, map.toList().sortedBy { it.value })
     }
@@ -92,9 +95,10 @@ abstract class CustomMutableMapTestsParent {
     @Test
     fun `test entries after some setting (collision prone)`() {
         val map = emptyCustomMutableMap<CollidingString, Int>()
-        val expected = (1..100).map {
-            CustomMutableMap.Entry(CollidingString(it.toString()), it)
-        }
+        val expected =
+            (1..100).map {
+                CustomMutableMap.Entry(CollidingString(it.toString()), it)
+            }
         expected.forEach {
             map[it.key] = it.value
         }
@@ -108,8 +112,11 @@ abstract class CustomMutableMapTestsParent {
         assertEquals(expected, map.toList().sortedBy { it.value })
     }
 
-    private class CollidingString(val string: String) : Comparable<CollidingString> {
+    private class CollidingString(
+        val string: String,
+    ) : Comparable<CollidingString> {
         override fun hashCode(): Int = 5
+
         override fun compareTo(other: CollidingString): Int = string.compareTo(other.string)
 
         override fun equals(other: Any?): Boolean {
@@ -147,11 +154,13 @@ abstract class CustomMutableMapTestsParent {
     }
 
     private fun createExpectedEntriesFromPuttingRemovingAndSetting(): List<CustomMutableMap.Entry<String, Int>> {
-        val entries = (1..100).map {
-            CustomMutableMap.Entry(it.toString(), it)
-        }.filter {
-            it.value % 2 != 0 || it.value % 4 == 0
-        }
+        val entries =
+            (1..100)
+                .map {
+                    CustomMutableMap.Entry(it.toString(), it)
+                }.filter {
+                    it.value % 2 != 0 || it.value % 4 == 0
+                }
         return entries
     }
 
@@ -182,12 +191,13 @@ abstract class CustomMutableMapTestsParent {
     }
 
     private fun createCollisionProneExpectedEntriesFromPuttingRemovingAndSetting(): List<CustomMutableMap.Entry<CollidingString, Int>> {
-        val entries = (1..100).map {
-            CustomMutableMap.Entry(CollidingString(it.toString()), it)
-        }.filter {
-            it.value % 2 != 0 || it.value % 4 == 0
-        }
+        val entries =
+            (1..100)
+                .map {
+                    CustomMutableMap.Entry(CollidingString(it.toString()), it)
+                }.filter {
+                    it.value % 2 != 0 || it.value % 4 == 0
+                }
         return entries
     }
 }
-*/

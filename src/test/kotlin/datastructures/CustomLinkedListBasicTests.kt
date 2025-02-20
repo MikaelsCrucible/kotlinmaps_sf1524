@@ -1,5 +1,5 @@
 package datastructures
-/*
+
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -7,7 +7,6 @@ import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 class CustomLinkedListBasicTests {
-
     @Test
     fun testAddFirst() {
         val list = CustomLinkedList<String>()
@@ -47,4 +46,3 @@ class CustomLinkedListBasicTests {
         assertNull(list.removeFirst())
     }
 }
-*/

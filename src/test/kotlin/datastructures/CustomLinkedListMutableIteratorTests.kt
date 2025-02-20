@@ -1,5 +1,5 @@
 package datastructures
-/*
+
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -7,7 +7,6 @@ import kotlin.test.assertTrue
 import kotlin.test.fail
 
 class CustomLinkedListMutableIteratorTests {
-
     @Test
     fun testBasicIteratorFunctionality() {
         val list = CustomLinkedList<Char>()
@@ -138,4 +137,3 @@ class CustomLinkedListMutableIteratorTests {
         }
     }
 }
-*/

@@ -1,5 +1,5 @@
 package datastructures
-/*
+
 import kotlin.test.Test
 import kotlin.test.assertNull
 
@@ -13,4 +13,3 @@ class HashmapBackedByListsTests : CustomMutableMapTestsParent() {
         assertNull(emptyCustomMutableMap<Int, String>()[0])
     }
 }
-*/

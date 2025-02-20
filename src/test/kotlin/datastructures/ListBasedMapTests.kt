@@ -1,11 +1,10 @@
 package datastructures
-/*
+
 import kotlin.test.Test
 import kotlin.test.assertNull
 
 class ListBasedMapTests : CustomMutableMapTestsParent() {
-    override fun <K, V> emptyCustomMutableMap(): CustomMutableMap<K, V> =
-        ListBasedMap()
+    override fun <K, V> emptyCustomMutableMap(): CustomMutableMap<K, V> = ListBasedMap()
 
     @Test
     fun testPlaceholder() {
@@ -14,4 +13,3 @@ class ListBasedMapTests : CustomMutableMapTestsParent() {
         assertNull(emptyCustomMutableMap<Int, String>()[0])
     }
 }
-*/
